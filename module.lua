@@ -91,7 +91,7 @@ function Properties.GetProperties(instance)
 	return Classes[tostring(instance)]
 end
 
-function Properties.ReadEnumerator(enum: Enum)
+function Properties.ReadEnumerator(enum)
 	return enum:GetEnumItems()
 end
 
