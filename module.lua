@@ -1,7 +1,6 @@
 -- THIS IS NOT MINE!
 --> Created all by loueque, thanks to RuizuKun_Dev and LucasMZ for finding spelling mistakes and suggestions. :thumbs_up:
 --> Source of HTTP, credits to them with some modifications: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
-function start()
 local HttpService = game:GetService("HttpService")
 local IsAPILoaded, APILoaded = false, Instance.new("BindableEvent")
 
@@ -76,7 +75,7 @@ local function CreatePropertiesForClasses()
 end
 
 task.spawn(CreatePropertiesForClasses)
-
+function start()
 local Properties = {}
 Properties.__index = {}
 
