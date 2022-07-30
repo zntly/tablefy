@@ -154,13 +154,13 @@ stuff.Properties = function(obj, fenv)
 	fenv = fenv or getfenv()
 	for i,v in next, fenv.Derived do
 		if obj:IsA(i) then
-			return AddToTable(v, Properties(obj, v) or { })
+			return stuff.AddToTable(v, Properties(obj, v) or { })
 		end
 	end
 end
 
 stuff.GetProperties = function(obj)
-	local tab = Properties(obj)
+	local tab = stuff.Properties(obj)
 	for i,v in next, tab do
 		if type(v) == "table" then
 			table.remove(tab, i)
