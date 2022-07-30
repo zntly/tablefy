@@ -154,7 +154,7 @@ stuff.Properties = function(obj, fenv)
 	fenv = fenv or getfenv()
 	for i,v in next, fenv.Derived do
 		if obj:IsA(i) then
-			return stuff.AddToTable(v, Properties(obj, v) or { })
+			return stuff.AddToTable(v, stuff.Properties(obj, v) or { })
 		end
 	end
 end
