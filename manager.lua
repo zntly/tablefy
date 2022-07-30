@@ -75,7 +75,6 @@ local function CreatePropertiesForClasses()
 end
 
 task.spawn(CreatePropertiesForClasses)
-function start()
 local Properties = {}
 Properties.__index = {}
 
@@ -96,5 +95,3 @@ function Properties.ReadEnumerator(enum)
 end
 
 return Properties
-end
-start()
